@@ -7,6 +7,7 @@ hint: where you place the screen.fill(black) will affect whether or not the squa
 
 '''
 import sys, pygame, random
+#random is not importing due to an error
 assert sys.version_info >= (3,4), 'This script requires at least Python 3.4' 
 
 screen_size = (800,600)
@@ -24,6 +25,7 @@ def main():
 	clock = pygame.time.Clock()
 
 	(x,y,width,height) = (100,100,50,50)
+    #I wanted to change each of the numbers listed into random integers, with randint(1,100) for the x and y with randint(1,50) for height and width.
 
 	while True:
 		clock.tick(FPS)
@@ -35,7 +37,12 @@ def main():
 				sys.exit(0)
 		color = red
 		pygame.draw.rect(screen, color, (x,y,width,height))
-		pygame.display.flip()
+#I wished to copy this above code block a total of fouor times, for four squares in different places, but since random is not importing, I am unable to do so.
+        #it should also be noted that anything I post in that code block becomes unreachable, no matter where I place it. Unless I delete a part of the code and replace it
+
+#
+#most likely, I am doing something wrong outside of python to get this error, but I am unsure of what it is. The import error with random seems to be the most detrimental, since without it
+#I cannot perform what I am wanting to. The unreachable code error is also another one.
 
 if __name__ == '__main__':
 	main()

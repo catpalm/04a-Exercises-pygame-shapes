@@ -29,14 +29,13 @@ def main():
 			if event.type == pygame.QUIT:
 				pygame.quit()
 				sys.exit(0)
-
-		print(datetime.now().time())
-
-		text = "Hello World!"
-		f = font.render(text, True, white)
+		time = str(datetime.now().time())
+		font = pygame.font.SysFont('Comic Sans MS', 30)
+		text = "The Time is Now"
+		f = font.render(time, True, white)
 		(fwidth,fheight) = font.size(text)
 		screen.blit(f,(x,y))
-		
+
 		pygame.display.flip()
 
 if __name__ == '__main__':

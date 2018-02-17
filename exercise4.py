@@ -19,7 +19,7 @@ def main():
 	font = pygame.font.SysFont("arial",64)
 	clock = pygame.time.Clock()
 
-	(x,y,radius) = (100,100,20)
+	(x, y, radius) = (100, 100, 20)
 	
 	while True:
 		clock.tick(FPS)
@@ -29,9 +29,13 @@ def main():
 			if event.type == pygame.QUIT:
 				pygame.quit()
 				sys.exit(0)
+			if event.type == pygame.MOUSEBUTTONDOWN:
+				pos = pygame.mouse.get_pos()
+				pygame.draw.circle(screen, white, pos, radius)
 			if event.type == pygame.MOUSEBUTTONUP:
 				pos = pygame.mouse.get_pos()
-		
+				pygame.draw.circle(screen, white, pos, radius)
+
 		pygame.draw.circle(screen, white, (x,y), radius)
 		
 		pygame.display.flip()
