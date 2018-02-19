@@ -16,7 +16,6 @@ white = (255,255,255)
 def main():
 	pygame.init()
 	screen = pygame.display.set_mode(screen_size)
-	font = pygame.font.SysFont("arial",64)
 	clock = pygame.time.Clock()
 
 	(x,y) = (100,100)
@@ -31,8 +30,8 @@ def main():
 				sys.exit(0)
 		time = str(datetime.now().time())
 		font = pygame.font.SysFont('Comic Sans MS', 30)
-		text = "The Time is Now"
-		f = font.render(time, True, white)
+		text = "The Time is Now:  "
+		f = font.render(text + time, True, white)
 		(fwidth,fheight) = font.size(text)
 		screen.blit(f,(x,y))
 

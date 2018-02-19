@@ -20,11 +20,11 @@ def main():
 	clock = pygame.time.Clock()
 
 	(x, y, radius) = (100, 100, 20)
-	
+	screen.fill(black)
 	while True:
 		clock.tick(FPS)
 
-		screen.fill(black)
+
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				pygame.quit()
